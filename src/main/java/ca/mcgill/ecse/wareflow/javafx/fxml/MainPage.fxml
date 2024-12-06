@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="851.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefWidth="851.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+        <tabs>
+          <Tab text="Users">
+               <content>
+				<fx:include source="pages/AddUser.fxml" />
+               </content>
+          </Tab>
+            <Tab text="Manager">
+               <content>
+                  <fx:include source="pages/UpdateManager.fxml" />
+               </content>
+            </Tab>
+			<Tab text="Item Type">
+               <content>
+                  <fx:include source="pages/ItemType.fxml" />
+               </content>
+            </Tab>
+            <Tab text="Container">
+               <content>
+                  <fx:include source="pages/Container.fxml" />
+               </content>
+            </Tab>
+            <Tab text="Order">
+               <content>
+                  <fx:include source="pages/OrderPage.fxml" />
+               </content>
+            </Tab>
+            <Tab text="Assign">
+               <content>
+                  <fx:include source="pages/AssignPage.fxml" />
+               </content>
+            </Tab>
+            <Tab text="Notes">
+               <content>
+                  <fx:include source="pages/NotePage.fxml" />
+               </content>
+            </Tab>
+            <Tab text="Change Status">
+               <content>
+                  <fx:include source="pages/UpdateStatusPage.fxml" />
+               </content>
+            </Tab>
+            <Tab text="View Status">
+               <content>
+                  <fx:include source="pages/StatusPage.fxml" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Separator prefHeight="0.0" prefWidth="851.0" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

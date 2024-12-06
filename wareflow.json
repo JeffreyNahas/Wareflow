@@ -1,0 +1,33 @@
+{
+  "ca.mcgill.ecse.wareflow.model.WareFlow": {
+    "employees": [
+      ""
+    ],
+    "clients": [
+      {
+        "ca.mcgill.ecse.wareflow.model.Client": {
+          "username": "user",
+          "name": "",
+          "password": "pass",
+          "phoneNumber": "",
+          "placedOrders": [
+            ""
+          ],
+          "address": "",
+          "wareFlow": {
+            "@reference": "../../.."
+          }
+        }
+      }
+    ],
+    "orders": [
+      ""
+    ],
+    "itemTypes": [
+      ""
+    ],
+    "itemContainers": [
+      ""
+    ]
+  }
+}

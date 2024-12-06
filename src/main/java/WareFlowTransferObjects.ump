@@ -1,0 +1,98 @@
+namespace ca.mcgill.ecse.wareflow.controller;
+
+class TOShipmentOrder {
+  immutable;
+  Integer id;
+  Integer quantity;
+  Date placedOnDate;
+  String description;
+  String orderPlacer;
+
+  String status;
+
+  // the following three attributes are set to null if no one has been assigned to the order
+  String processedBy;
+  String timeToResolve;
+  String priority;
+  Boolean approvalRequired;
+
+  // the following five attributes are set to null (String/Date) / -1 (Integer) if no item container is specified for the order yet
+  String itemName;
+  Integer expectedLifeSpanInDays;
+  Date addedOnDate;
+  Integer areaNumber;
+  Integer slotNumber;
+   
+  0..1 -> * TOShipmentNote notes;
+  * -> 0..1 TOUser;
+  * -> 0..1 TOWarehouseStaff;
+  * ordersForApproval -> 0..1 TOManager orderApprover;
+  * -> 0..1 TOItemContainer;
+
+}
+
+class TOShipmentNote {
+  immutable;
+  Date date;
+  String description;
+  String noteTakerUsername;
+}
+
+class TOUser{
+  immutable;
+  String username;
+  String name;
+  String password;
+  String phoneNumber;
+}
+
+class TOWarehouseStaff{
+  immutable;
+  String username;
+  String name;
+  String password;
+  String phoneNumber;
+  0..1 -> * TOShipmentNote;
+}
+
+class TOClient {
+  immutable;
+  String address;
+  String username;
+  String name;
+  String password;
+  String phoneNumber;
+}
+
+class TOEmployee{
+  immutable;
+  String username;
+  String name;
+  String password;
+  String phoneNumber;
+} 
+
+class TOManager{
+  immutable;
+  String username;
+  String name;
+  String password;
+  String phoneNumber;
+
+  0..1 orderPicker -> * TOShipmentOrder shipmentOrders;
+}
+
+class TOItemContainer{
+  immutable;
+  Integer containerNumber;
+  Integer areaNumber;
+  Integer slotNumber;
+  Date addedOnDate;
+}
+
+class TOItemType{
+  String name;
+  Integer expectedLifeSpanInDays;
+  0..1 -> * TOItemContainer;
+  
+}

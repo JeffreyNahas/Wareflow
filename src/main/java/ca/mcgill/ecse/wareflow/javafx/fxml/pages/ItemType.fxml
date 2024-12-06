@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane hgap="10.0" vgap="5.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.wareflow.javafx.fxml.controllers.ItemTypePageController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="0.0" prefWidth="109.0" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="561.0" minWidth="4.0" prefWidth="110.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="561.0" minWidth="0.0" prefWidth="110.0" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="561.0" minWidth="10.0" prefWidth="122.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="561.0" minWidth="10.0" prefWidth="124.0" />
+      <ColumnConstraints hgrow="ALWAYS" maxWidth="561.0" minWidth="10.0" prefWidth="141.0" />
+   </columnConstraints>
+   <children>
+      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="164.0" text="Name:" />
+      <TextField id="name" fx:id="name" prefHeight="25.0" prefWidth="153.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="136.0" text="New Name:" GridPane.columnIndex="2" />
+      <TextField id="newName" fx:id="newName" prefHeight="25.0" prefWidth="138.0" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" />
+      <Button id="addButton" fx:id="addButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#addButtonClicked" prefHeight="25.0" prefWidth="163.0" text="Add Item Type" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+      <Button id="updateButton" fx:id="updateButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#updateButtonClicked" prefHeight="25.0" prefWidth="172.0" text="Update Item Type" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+      <Button id="deleteButton" fx:id="deleteButton" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#deleteButtonClicked" prefHeight="25.0" prefWidth="172.0" text="Delete Item Type" GridPane.columnIndex="5" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4" />
+      <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="159.0" text="Expected Life Span:" GridPane.columnIndex="4" />
+      <TextField id="expected" fx:id="expected" prefHeight="25.0" prefWidth="153.0" GridPane.columnIndex="5" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+   </rowConstraints>
+</GridPane>

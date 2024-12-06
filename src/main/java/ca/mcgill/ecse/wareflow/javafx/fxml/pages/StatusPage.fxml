@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="605.0" prefWidth="823.0" style="-fx-background-color: #dbb85e;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ca.mcgill.ecse.wareflow.javafx.fxml.controllers.Status">
+   <children>
+      <Button layoutX="89.0" layoutY="1.0" mnemonicParsing="false" text="Refresh" onAction="#refreshClicked" />
+
+      <ScrollPane layoutY="36.0" prefHeight="554.0" prefWidth="790.0">
+         <content>
+            <TableView fx:id="shipmentOrderTable" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="1525.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="84.0" text="Order ID" />
+                <TableColumn fx:id="orderPlacerColumn" prefWidth="85.0" text="Order Placer" />
+                <TableColumn fx:id="placedOnColumn" prefWidth="109.0" text="Order Placed On" />
+                <TableColumn fx:id="descriptionColumn" prefWidth="75.0" text="Description" />
+                <TableColumn fx:id="assetNameColumn" prefWidth="97.0" text="Asset Name" />
+                <TableColumn fx:id="expectedLifeSpanColumn" prefWidth="131.0" text="Expected Lifespan" />
+                <TableColumn fx:id="purchaseDateColumn" prefWidth="98.0" text="Purchase Date" />
+                <TableColumn fx:id="areaNumberColumn" prefWidth="134.0" text="Area Number" />
+                <TableColumn fx:id="slotNumberColumn" prefWidth="83.0" text="Slot Number" />
+                <TableColumn fx:id="quantityColumn" prefWidth="70.0" text="Quantity" />
+                <TableColumn fx:id="statusColumn" prefWidth="72.0" text="Status" />
+                <TableColumn fx:id="processedByColumn" prefWidth="105.0" text="Processed By" />
+                <TableColumn fx:id="estFulfillmentColumn" prefWidth="174.0" text="Estimated Fulfillment Time" />
+                <TableColumn fx:id="priorityColumn" minWidth="0.0" prefWidth="79.0" text="Priority" />
+                <TableColumn fx:id="approvalRequiredColumn" prefWidth="125.0" text="Approval Required" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

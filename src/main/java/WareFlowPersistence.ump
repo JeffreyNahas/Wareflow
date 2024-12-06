@@ -1,0 +1,58 @@
+class WareFlow {
+  public void reinitialize() {
+  	// all classes with IDS need to be reinitialized here
+    //There are only four classes with unique identifiers:
+    ItemContainer.reinitializeContainerNumber(getItemContainers());
+    ItemType.reinitializeUniqueName(getItemTypes());
+    ShipmentOrder.reinitializeUniqueID(getOrders());
+    User.reinitializeUniqueUsername(getManager(),getClients(),getEmployees());
+  }
+}
+// implement reinitialize methods for each class that has a 'unique' attribute
+class ItemContainer {
+  // Reinitializes the mapping of container numbers to ItemContainer instances.
+  public static void reinitializeContainerNumber(List<ItemContainer> itemcontainers) {
+    // This clears the existing map
+    itemcontainersByContainerNumber.clear();
+    // This repopulates it based on the provided list of item containers
+    for (ItemContainer i : itemcontainers) {
+      itemcontainersByContainerNumber.put(i.getContainerNumber(), i);
+    }
+  }
+}
+
+class ItemType {
+  public static void reinitializeUniqueName(List<ItemType> itemtypes) {
+    // This clears the existing map
+    itemtypesByName.clear();
+    // This repopulates it based on the provided list of item types
+    for (ItemType t : itemtypes) {
+      itemtypesByName.put(t.getName(), t);
+    }
+  }
+}
+
+class ShipmentOrder {
+  public static void reinitializeUniqueID(List<ShipmentOrder> shipmentorders) {
+    // This clears the existing map
+    shipmentordersById.clear();
+    // This repopulates it based on the provided list of shipment orders
+    for (ShipmentOrder s : shipmentorders) {
+      shipmentordersById.put(s.getId(), s);
+    }
+  }
+}
+
+
+  class User{
+	public static void reinitializeUniqueUsername(Manager manager,List<Client> clients, List<Employee> employees){
+		usersByUsername.clear();
+		usersByUsername.put(manager.getUsername(),manager);
+		for(var c: clients){
+			usersByUsername.put(c.getUsername(),c);
+		}
+		for (var e: employees){
+			usersByUsername.put(e.getUsername(),e);
+		}
+	}
+}
